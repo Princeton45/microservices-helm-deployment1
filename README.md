@@ -1,7 +1,9 @@
 # Microservices Deployment Project with Kubernetes and Helm
 
 ## Overview
-This project demonstrates my journey in deploying a microservices-based online shop application using Kubernetes, Helm, and Helmfile. The project was completed in three distinct phases, each building upon the previous one.
+This project showcases a comprehensive deployment pipeline for Google's Online Boutique, a cloud-native microservices demo application. The deployment architecture is implemented across three progressive phases, leveraging Kubernetes (Linode LKE), Helm, and Helmfile.
+
+> 🛍️ **Demo Application**: This project deploys [Google's Online Boutique](https://github.com/GoogleCloudPlatform/microservices-demo), a cloud-native microservices application consisting of 11 services that together form a fully-functional e-commerce platform.
 
 
 ![Diagram](https://github.com/Princeton45/k8s-mongodb-express-local/blob/main/images/diagram.png)

@@ -1,0 +1,27 @@
+graph TD
+    subgraph "Phase 1: Kubernetes Deployment"
+        A[Online Shop Application] -->|Deploy to| B[Linode LKE Cluster]
+        B -->|Uses| C[Redis Cache]
+        B -->|Managed by| D[K8s Manifests]
+        D -->|Consists of| E[Deployments]
+        D -->|Consists of| F[Services]
+    end
+
+    subgraph "Phase 2: Helm Implementation"
+        G[Shared Helm Chart] -->|Templates| H[Common Configurations]
+        H -->|Generates| I[K8s Deployments]
+        H -->|Generates| J[K8s Services]
+        I -->|Uses| K[values.yaml]
+        J -->|Uses| K
+    end
+
+    subgraph "Phase 3: Helmfile Deployment"
+        L[Helmfile] -->|Manages| M[Multiple Environments]
+        M -->|Dev| N[Development]
+        M -->|Prod| O[Production]
+        L -->|Orchestrates| P[Helm Releases]
+        P -->|Deploys| Q[Microservices]
+    end
+
+    B -->|Enhanced by| G
+    G -->|Automated by| L

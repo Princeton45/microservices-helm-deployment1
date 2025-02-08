@@ -6,7 +6,7 @@ This project showcases a comprehensive deployment pipeline for Google's Online B
 > 🛍️ **Demo Application**: This project deploys [Google's Online Boutique](https://github.com/GoogleCloudPlatform/microservices-demo), a cloud-native microservices application consisting of 11 services that together form a fully-functional e-commerce platform.
 
 
-![Diagram](https://github.com/Princeton45/k8s-mongodb-express-local/blob/main/images/diagram.png)
+![Diagram](https://github.com/Princeton45microservices-helm-deployment1/blob/main/images/diagram.jpg)
 
 ## Phase 1: Kubernetes Deployment with Production & Security Best Practices
 

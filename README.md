@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Microservices Deployment Project with Kubernetes and Helm
 
 ## Overview

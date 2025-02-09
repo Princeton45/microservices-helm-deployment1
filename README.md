@@ -10,8 +10,12 @@ This project showcases a comprehensive deployment pipeline for Google's Online B
 
 ## Phase 1: Kubernetes Deployment with Production & Security Best Practices
 
+![Microservices](https://github.com/Princeton45/microservices-helm-deployment1/blob/main/images/Microservices.png)
+
 ### What I Built
-- Created complete Kubernetes manifests for an online shop application
+- Created Deployment & Service Configurations for all of the Microservices
+
+
 - Deployed microservices on Linode Kubernetes Engine (LKE)
 - Implemented Redis for caching and session management
 - Applied production-grade security configurations

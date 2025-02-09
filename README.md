@@ -652,10 +652,6 @@ The `values.yaml` in the chart folder is used to specify the default values for 
 
 The values files in the `values` folder is used to override the default values specified in the `values.yaml` file in the charts folder (for e.g, if the default value for replicas is 1 but this time you want to have 5 replicas).
 
-### Technologies Used
-- Kubernetes
-- Helm
-
 ## Phase 3: Helmfile Deployment
 
 ### What I Built

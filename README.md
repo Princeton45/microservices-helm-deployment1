@@ -600,10 +600,11 @@ Now, if I use any of the worker nodes Public IP through port 30117, it will brin
 
 ![ecom](https://github.com/Princeton45/microservices-helm-deployment1/blob/main/images/ecom.png)
 
-- I applied the following production-grade security configurations & best practices
-    - Making sure that your images contain a version, so it's not always pulling the latest version so avoid issues
+- I applied the following production-grade security configurations & best practices:
+
+    - Making sure that your images contain a version, so it's not always pulling the latest version to avoid issues with untested versions.
     - Configuring liveness probes b/c a pod itself can state it is running and healthy, but the container/application inside could be in an unhealthy state. With the liveness probes, Kubernetes can now know if the application within the Pod is running successfully or not. Kubernetes will automatically restart the app. if there are issues.
-    
+
 
 [Kubernetes Dashboard Screenshot]
 

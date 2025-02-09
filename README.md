@@ -606,14 +606,6 @@ Now, if I use any of the worker nodes Public IP through port 30117, it will brin
     - Configuring liveness probes b/c a pod itself can state it is running and healthy, but the container/application inside could be in an unhealthy state. With the liveness probes, Kubernetes can now know if the application within the Pod is running successfully or not. Kubernetes will automatically restart the app. if there are issues.
 
 
-[Kubernetes Dashboard Screenshot]
-
-### Technologies Used
-- Kubernetes
-- Redis
-- Linux
-- Linode LKE
-
 ## Phase 2: Helm Chart Implementation
 
 ### What I Built

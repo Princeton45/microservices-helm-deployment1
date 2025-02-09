@@ -621,7 +621,7 @@ Now, if I use any of the worker nodes Public IP through port 30117, it will brin
 - Implemented reusable configurations for Deployments and Services
 - Created standardized templates for consistent deployments
 
-📁 charts/
+```📁 charts/
 ├── microservice/
 │   ├── templates/
 │   ├── .helmignore
@@ -644,7 +644,7 @@ Now, if I use any of the worker nodes Public IP through port 30117, it will brin
 ├── productcatalog-service-values.yaml
 ├── recommendation-service-values.yaml
 ├── redis-values.yaml
-└── shipping-service-values.yaml
+└── shipping-service-values.yaml```
 
 The `values.yaml` in the chart folder is used to specify the default values for the charts when it's being deployed.
 

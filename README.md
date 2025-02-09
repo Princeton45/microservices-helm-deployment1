@@ -591,6 +591,15 @@ spec:
 </details>
 
 - Deployed microservices on Linode Kubernetes Engine (LKE)
+
+![Linode](https://github.com/Princeton45/microservices-helm-deployment1/blob/main/images/linode.png)
+
+![Kubernetes-resources](https://github.com/Princeton45/microservices-helm-deployment1/blob/main/images/kubernetes_resources.png)
+
+Now, if I use any of the worker nodes Public IP through port 30117, it will bring me to the online ecommerce website.
+
+![ecom](https://github.com/Princeton45/microservices-helm-deployment1/blob/main/images/ecom.png)
+
 - Implemented Redis for caching and session management
 - Applied production-grade security configurations
 

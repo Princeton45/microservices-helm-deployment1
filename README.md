@@ -621,7 +621,8 @@ Now, if I use any of the worker nodes Public IP through port 30117, it will brin
 - Implemented reusable configurations for Deployments and Services
 - Created standardized templates for consistent deployments
 
-```📁 charts/
+```
+📁 charts/
 ├── microservice/
 │   ├── templates/
 │   ├── .helmignore

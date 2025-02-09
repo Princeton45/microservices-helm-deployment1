@@ -604,6 +604,14 @@ Now, if I use any of the worker nodes Public IP through port 30117, it will brin
 
     - Making sure that your images contain a version, so it's not always pulling the latest version to avoid issues with untested versions.
     - Configuring liveness probes b/c a pod itself can state it is running and healthy, but the container/application inside could be in an unhealthy state. With the liveness probes, Kubernetes can now know if the application within the Pod is running successfully or not. Kubernetes will automatically restart the app. if there are issues.
+    - Configuring readiness probes for each container to let Kubernetes know the application is ready before making the pod ready.
+    - Assigning resource requests and limits for the containers.
+    - NodePort Service opens the nodePort on each worker node which increases the attack surface. Instead, only use internal services (ClusterIP) and have one entrypoint into the cluster (ideally the entrypoint should be sitting outside of the cluster in a separate server). In this case I used a LoadBalancer service instead of NodePort. I could've also used Ingress as well.
+    - Always have more than 1 replica for Deployments.
+    - Always use more than 1 worker node in the cluster.
+    - Use namespaces to isolate Kubernetes resources.
+    - Ensuring that the Images used are free of vulnerabilities. This can be incorporated through vulnerability scans in a build pipeline
+    - No root access for containers
 
 
 ## Phase 2: Helm Chart Implementation
@@ -613,7 +621,34 @@ Now, if I use any of the worker nodes Public IP through port 30117, it will brin
 - Implemented reusable configurations for Deployments and Services
 - Created standardized templates for consistent deployments
 
-[Helm Architecture Diagram]
+📁 charts/
+├── microservice/
+│   ├── templates/
+│   ├── .helmignore
+│   ├── Chart.yaml
+│   └── values.yaml
+└── redis/
+    ├── templates/
+    ├── .helmignore
+    ├── Chart.yaml
+    └── values.yaml
+
+📁 values/
+├── ad-service-values.yaml
+├── cart-service-values.yaml
+├── checkout-service-values.yaml
+├── currency-service-values.yaml
+├── email-service-values.yaml
+├── frontend-values.yaml
+├── payment-service-values.yaml
+├── productcatalog-service-values.yaml
+├── recommendation-service-values.yaml
+├── redis-values.yaml
+└── shipping-service-values.yaml
+
+The `values.yaml` in the chart folder is used to specify the default values for the charts when it's being deployed.
+
+The values files in the `values` folder is used to override the default values specified in the `values.yaml` file in the charts folder (for e.g, if the default value for replicas is 1 but this time you want to have 5 replicas).
 
 ### Technologies Used
 - Kubernetes

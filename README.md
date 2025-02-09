@@ -588,6 +588,7 @@ spec:
     port: 80
     targetPort: 8080
 ```
+</details>
 
 - Deployed microservices on Linode Kubernetes Engine (LKE)
 - Implemented Redis for caching and session management

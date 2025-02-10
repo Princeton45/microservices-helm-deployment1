@@ -717,3 +717,5 @@ releases:
     values:
       - values/frontend-values.yaml
 ```
+
+Before the helmfile, I had to individually one-by-one install the helm releases for each microservice but now with the Helmfile, I can declare all the releases needed to be installed in the `helmfile.yaml` file and it will install all of it at once.
